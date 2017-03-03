@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+}
+
+/*以下 ヘッダー*/
+header {
+    top: 0px;
+    height: 40px;
+    width: 100%;
+    background-color: aqua;
+    /*opacity: 0.5;*/
+    position: fixed; /*画面上に固定*/
+    z-index: 10;　/*要素の重なりの順番を指定*/
+}
+
+.header-list {
+    height: 40px;
+    width: 12%;
+    float: left;
+    display: block;
+    border: 0.5px solid #00BFFF;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.header-list:hover {
+  background-color: rgba(0,0,255,0.5);
+}
+
+.header-list a {
+    padding: auto;
+    border: auto;
+    font-size: 14px;
+    color: white;
+    line-height: 40px; /*行間を指定*/
+    text-decoration: none;
+}
+
+/*以下 タイトル*/
+.header-title {
+    top: 40px;
+    position: absolute;
+    padding: 20 auto;
+    height: 100px;
+    width: 100%;
+    background-color: azure;
+    text-align: center; /*中央揃え*/
+}
+
+.header-title h {
+    padding: 0, inherit; 
+    color: black;
+    font-size: 50px; 
+}
+
+/*以下 記事*/
+.articles {
+    top: 140px;
+    position: absolute;
+    height: 3000px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.text-box {
+    margin: 50px 50px 80px 100px;
+    padding: 15px 0px 15px 10px;
+    height:  150px;
+    width: 60%;
+    background-color: #FFFFFF;
+    position: relative;
+    border: 0.5px solid #000000;
+}
+
+.janleImage {
+    height: 120px;
+    width: 180px;
+    border: 5px solid #1c2119;
+    background-image: url(NK9V9A9153_TP_V1.jpg);
+    background-size: cover;
+    padding: 10px 0px 15px 10px;
+    float: left;
+}
+
+.article span {
+    font-size: 15px;
+}
+
+/*以下 投稿欄*/
+.post {
+    top: 2540px;
+    position: absolute;
+    margin: 50px 50px 80px 100px;
+    height: 300px;
+    width: 85%;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.post-logo p {
+    position: relative;
+    top: 0px;
+    left: 10px;
+    font-size: 30px;
+}
+
+.post-title p {
+    position: relative;
+    top: 30px;
+    left: 10px;
+    font-size: 15px;
+}
+
+.post-title input {
+    position: relative;
+    top: 30px;
+    left: 10px;
+    font-size: 15px;
+}
+
+
+.post-article p {
+    position: relative;
+    top: 50px;
+    left: 10px;
+    font-size: 15px;
+}
+
+.post-article textarea {
+    position: relative;
+    top: 50px;
+    left: 10px;
+    height: 120px;
+    width: 400px;
+    font-size: 15px;
+}
+
+.post-article input {
+    position: relative;
+    top: 50px;
+    left: 10px;
+    font-size: 20px;
+}
+
+/*以下 フッター*/
+footer {
+    top: 3140px;
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+}
+
