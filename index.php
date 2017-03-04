@@ -31,6 +31,27 @@
                 </div>
             </div>
         </header>
+               <?php
+            /*  ----初期化_開始----- */
+		    // 連想配列($array)
+		    $array = array(
+			"title" => ["合宿所で!?カメムシ大量発生!!", "男は辛いよ"],
+			"contents" => ["合宿所でカメムシが大量発生する事件が起きました。皆様電球の穴には気をつけて下さい!", "はい。そのまんま。男は辛いよ!"]
+		    );
+		    // 連想配列($array)をJSONに変換(エンコード)する
+		    $json = json_encode( $array , JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE| JSON_UNESCAPED_SLASHES ) ;
+		    file_put_contents("data.json" , $json);
+		    /* -----初期化_終了----- */
+            // JSONファイルのURL
+		    $jsonUrl = "data.json";
+		    // JSONファイルの中身を取得
+		    $json = file_get_contents($jsonUrl);
+		    // JSON($json)を連想配列に変換(デコード)する
+		    $json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+		    $array = json_decode( $json , true ) ;
+		    // タイトル番号用
+		    $i = 0;
+       ?>
         <div class=header-title>
             <p>タイトル</p>
         </div>
@@ -40,10 +61,10 @@
                     <div class=janleImage>
                     </div>
                     <div class=article-title>
-                        <a href="indexSub.html">タイトル</a>
+                        <a href="indexSub.html"><?php echo $array["title"][$i] ?></a>
                     </div>
                     <div class=article-wrap>
-                        <a href="indexSub.html">ここに記事を...</a>
+                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
                     </div>
                     <span class="good btn">いいね</span>
                 </div>
@@ -53,10 +74,10 @@
                     <div class=janleImage>
                     </div>
                     <div class=article-title>
-                        <a href="indexSub.html">タイトル</a>
+                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
                     </div>
                     <div class=article-wrap>
-                        <a href="indexSub.html">ここに記事を...</a>
+                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
                     </div>
                     <span class="good btn">いいね</span>
                 </div>
@@ -66,10 +87,10 @@
                     <div class=janleImage>
                     </div>
                     <div class=article-title>
-                        <a href="indexSub.html">タイトル</a>
+                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
                     </div>
                     <div class=article-wrap>
-                        <a href="indexSub.html">ここに記事を...</a>
+                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
                     </div>
                     <span class="good btn">いいね</span>
                 </div>
@@ -79,10 +100,10 @@
                     <div class=janleImage>
                     </div>
                     <div class=article-title>
-                        <a href="indexSub.html">タイトル</a>
+                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
                     </div>
                     <div class=article-wrap>
-                        <a href="indexSub.html">ここに記事を...</a>
+                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
                     </div>
                     <span class="good btn">いいね</span>
                 </div>
@@ -92,10 +113,10 @@
                     <div class=janleImage>
                     </div>
                     <div class=article-title>
-                        <a href="indexSub.html">タイトル</a>
+                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
                     </div>
                     <div class=article-wrap>
-                        <a href="indexSub.html">ここに記事を...</a>
+                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
                     </div>
                     <span class="good btn">いいね</span>
                 </div>
@@ -105,10 +126,10 @@
                     <div class=janleImage>
                     </div>
                     <div class=article-title>
-                        <a href="indexSub.html">タイトル</a>
+                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
                     </div>
                     <div class=article-wrap>
-                        <a href="indexSub.html">ここに記事を...</a>
+                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
                     </div>
                     <span class="good btn">いいね</span>
                 </div>
@@ -118,10 +139,10 @@
                     <div class=janleImage>
                     </div>
                     <div class=article-title>
-                        <a href="indexSub.html">タイトル</a>
+                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
                     </div>
                     <div class=article-wrap>
-                        <a href="indexSub.html">ここに記事を...</a>
+                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
                     </div>
                     <span class="good btn">いいね</span>
                 </div>
@@ -131,10 +152,10 @@
                     <div class=janleImage>
                     </div>
                     <div class=article-title>
-                        <a href="indexSub.html">タイトル</a>
+                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
                     </div>
                     <div class=article-wrap>
-                        <a href="indexSub.html">ここに記事を...</a>
+                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
                     </div>
                     <span class="good btn">いいね</span>
                 </div>
@@ -144,10 +165,10 @@
                     <div class=janleImage>
                     </div>
                     <div class=article-title>
-                        <a href="indexSub.html">タイトル</a>
+                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
                     </div>
                     <div class=article-wrap>
-                        <a href="indexSub.html">ここに記事を...</a>
+                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
                     </div>
                     <a href="indexSub.html">ここ</a>
                     <span class="good btn">いいね</span>
@@ -158,10 +179,10 @@
                     <div class=janleImage>
                     </div>
                     <div class=article-title>
-                        <a href="indexSub.html">タイトル</a>
+                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
                     </div>
                     <div class=article-wrap>
-                        <a href="indexSub.html">ここに記事を...</a>
+                        <a href="indexSub.html"><?php echo $array["contents"][$i];?></a>
                     </div>
                     <span class="good btn">いいね</span>
                 </div>
@@ -169,25 +190,6 @@
         </div>
         <div class=fakeAdvertisement>
        </div>
-       <?php
-            /*  ----初期化_開始----- 
-		    // 連想配列($array)
-		    $array = array(
-			"title" => ["合宿所で!?カメムシ大量発生!!", "男は辛いよ"],
-			"contents" => ["合宿所でカメムシが大量発生する事件が起きました。皆様電球の穴には気をつけて下さい!", "はい。そのまんま。男は辛いよ!"]
-		    );
-		    // 連想配列($array)をJSONに変換(エンコード)する
-		    $json = json_encode( $array , JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE| JSON_UNESCAPED_SLASHES ) ;
-		    file_put_contents("data.json" , $json);
-		     -----初期化_終了----- */
-            // JSONファイルのURL
-		    $jsonUrl = "data.json";
-		    // JSONファイルの中身を取得
-		    $json = file_get_contents($jsonUrl);
-		    // JSON($json)を連想配列に変換(デコード)する
-		    $json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
-		    $array = json_decode( $json , true ) ;
-       ?>
        	<form action="indexSub.php" method="post">
             <div class=post>
                 <div class=post-logo>
