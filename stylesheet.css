@@ -90,10 +90,6 @@ header {
     float: left;
 }
 
-.article span {
-    font-size: 15px;
-}
-
 .fakeAdvertisement {
     position: fixed;
     top: 210px;
