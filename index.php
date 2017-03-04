@@ -15,19 +15,34 @@
         <header>
             <div class=container>
                 <div class=header-list>
-                    <a href="index.html">トップページ</a>
+                    <a href="index.php">トップページ</a>
                 </div>
                 <div class=header-list>
-                    <a>じゃんる</a>
+                    <a>じゃんる一覧</a>
                 </div>
                 <div class=header-list>
-                    <a>interesting</a>
+                    <a>ニュース</a>
                 </div>
                 <div class=header-list>
-                    <a>mod</a>
+                    <a>おもしろ画像</a>
                 </div>
                 <div class=header-list>
-                    <a>2チャンネル</a>
+                    <a>動画</a>
+                </div>
+                <div class=header-list>
+                    <a>アニメ</a>
+                </div>
+                <div class=header-list>
+                    <a>萌え</a>
+                </div>
+                <div class=header-list>
+                    <a>政治・経済</a>
+                </div>
+                <div class=header-list>
+                    <a href="http://kemono-friends.jp">ふれんず</a>
+                </div>
+                <div class=header-list>
+                    <a>アダルト</a>
                 </div>
             </div>
         </header>
@@ -55,143 +70,179 @@
 		    $i = 0;
        ?>
         <div class=header-title>
-            <p>タイトル</p>
+            <p>Scientific Glasses 速報</p>
+        </div>
+        <div class=titles>
+        </div>
+        <diV class=sidebar>
+            <div class=sidebar-left>
+                <div class=sidebar-box>
+                </div>
+            </div>
+            <div class=sidebar-right>
+                <div class=sidebar-box>
+                </div>
+            </div>
+        </diV>
+        <div class=design>
+            <div class=main-bar>
+                <p>＜人気記事まとめ＞</p>
+            </div>
+            <div class=side-tagFirst>
+                <p>＜PR＞</p>
+            </div>
+            <div class=side-tagSecond>
+                <p>＜PR＞</p>
+            </div>
+            <div class=fakeAdvertisement>
+                <div class=fakeAdvertisement-first>
+                </div>
+                <div class=fakeAdvertisement-second>
+                </div>
+            </div>
+        </div>
+        <div class=producerProfile>
+            <div class=producerProfile-bar>
+                <p>管理人</p>
+            </div>
+            <div class=producerProfile-container>
+            </div>
         </div>
         <div class=articles>
-            <div class=article>
-                <div class=text-box>
-                    <div class=janleImage>
+            <div class=container-article>
+                <div class=article>
+                    <div class=text-box>
+                        <div class=janleImage>
+                        </div>
+                        <div class=article-title>
+                            <a href="indexSub.php"><?php echo $array["title"][$i] ?></a>
+                        </div>
+                        <div class=article-wrap>
+                            <a href="indexSub.php"><?php echo $array["contents"][$i] ?></a>
+                        </div>
+                        <span class="good btn">いいね</span>
                     </div>
-                    <div class=article-title>
-                        <a href="indexSub.html"><?php echo $array["title"][$i] ?></a>
-                    </div>
-                    <div class=article-wrap>
-                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
-                    </div>
-                    <span class="good btn">いいね</span>
                 </div>
-            </div>
-            <div class=article>
-                <div class=text-box>
-                    <div class=janleImage>
+                <div class=article>
+                    <div class=text-box>
+                        <div class=janleImage>
+                        </div>
+                        <div class=article-title>
+                            <a href="indexSub.php"><?php $i++; echo $array["title"][$i]; ?></a>
+                        </div>
+                        <div class=article-wrap>
+                            <a href="indexSub.php"><?php echo $array["contents"][$i] ?></a>
+                        </div>
+                        <span class="good btn">いいね</span>
                     </div>
-                    <div class=article-title>
-                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
-                    </div>
-                    <div class=article-wrap>
-                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
-                    </div>
-                    <span class="good btn">いいね</span>
                 </div>
-            </div>
-            <div class=article>
-                <div class=text-box>
-                    <div class=janleImage>
+                <div class=article>
+                    <div class=text-box>
+                        <div class=janleImage>
+                        </div>
+                        <div class=article-title>
+                            <a href="indexSub.php"><?php $i++; echo $array["title"][$i]; ?></a>
+                        </div>
+                        <div class=article-wrap>
+                            <a href="indexSub.php"><?php echo $array["contents"][$i] ?></a>
+                        </div>
+                        <span class="good btn">いいね</span>
                     </div>
-                    <div class=article-title>
-                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
-                    </div>
-                    <div class=article-wrap>
-                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
-                    </div>
-                    <span class="good btn">いいね</span>
                 </div>
-            </div>
-            <div class=article>
-                <div class=text-box>
-                    <div class=janleImage>
+                <div class=article>
+                    <div class=text-box>
+                        <div class=janleImage>
+                        </div>
+                        <div class=article-title>
+                            <a href="indexSub.php"><?php $i++; echo $array["title"][$i]; ?></a>
+                        </div>
+                        <div class=article-wrap>
+                            <a href="indexSub.php"><?php echo $array["contents"][$i] ?></a>
+                        </div>
+                        <span class="good btn">いいね</span>
                     </div>
-                    <div class=article-title>
-                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
-                    </div>
-                    <div class=article-wrap>
-                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
-                    </div>
-                    <span class="good btn">いいね</span>
                 </div>
-            </div>
-            <div class=article>
-                <div class=text-box>
-                    <div class=janleImage>
+                <div class=article>
+                    <div class=text-box>
+                        <div class=janleImage>
+                        </div>
+                        <div class=article-title>
+                            <a href="indexSub.php"><?php $i++; echo $array["title"][$i]; ?></a>
+                        </div>
+                        <div class=article-wrap>
+                            <a href="indexSub.php"><?php echo $array["contents"][$i] ?></a>
+                        </div>
+                        <span class="good btn">いいね</span>
                     </div>
-                    <div class=article-title>
-                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
-                    </div>
-                    <div class=article-wrap>
-                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
-                    </div>
-                    <span class="good btn">いいね</span>
                 </div>
-            </div>
-            <div class=article>
-                <div class=text-box>
-                    <div class=janleImage>
+                <div class=article>
+                    <div class=text-box>
+                        <div class=janleImage>
+                        </div>
+                        <div class=article-title>
+                            <a href="indexSub.php"><?php $i++; echo $array["title"][$i]; ?></a>
+                        </div>
+                        <div class=article-wrap>
+                            <a href="indexSub.php"><?php echo $array["contents"][$i] ?></a>
+                        </div>
+                        <span class="good btn">いいね</span>
                     </div>
-                    <div class=article-title>
-                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
-                    </div>
-                    <div class=article-wrap>
-                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
-                    </div>
-                    <span class="good btn">いいね</span>
                 </div>
-            </div>
-            <div class=article>
-                <div class=text-box>
-                    <div class=janleImage>
+                <div class=article>
+                    <div class=text-box>
+                        <div class=janleImage>
+                        </div>
+                        <div class=article-title>
+                            <a href="indexSub.php"><?php $i++; echo $array["title"][$i]; ?></a>
+                        </div>
+                        <div class=article-wrap>
+                            <a href="indexSub.php"><?php echo $array["contents"][$i] ?></a>
+                        </div>
+                        <span class="good btn">いいね</span>
                     </div>
-                    <div class=article-title>
-                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
-                    </div>
-                    <div class=article-wrap>
-                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
-                    </div>
-                    <span class="good btn">いいね</span>
                 </div>
-            </div>
-            <div class=article>
-                <div class=text-box>
-                    <div class=janleImage>
+                <div class=article>
+                    <div class=text-box>
+                        <div class=janleImage>
+                        </div>
+                        <div class=article-title>
+                            <a href="indexSub.php"><?php $i++; echo $array["title"][$i]; ?></a>
+                        </div>
+                        <div class=article-wrap>
+                            <a href="indexSub.php"><?php echo $array["contents"][$i] ?></a>
+                        </div>
+                        <span class="good btn">いいね</span>
                     </div>
-                    <div class=article-title>
-                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
-                    </div>
-                    <div class=article-wrap>
-                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
-                    </div>
-                    <span class="good btn">いいね</span>
                 </div>
-            </div>
-            <div class=article>
-                <div class=text-box>
-                    <div class=janleImage>
+                <div class=article>
+                    <div class=text-box>
+                        <div class=janleImage>
+                        </div>
+                        <div class=article-title>
+                            <a href="indexSub.php"><?php $i++; echo $array["title"][$i]; ?></a>
+                        </div>
+                        <div class=article-wrap>
+                            <a href="indexSub.php"><?php echo $array["contents"][$i] ?></a>
+                        </div>
+                        <a href="indexSub.html">ここ</a>
+                        <span class="good btn">いいね</span>
                     </div>
-                    <div class=article-title>
-                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
-                    </div>
-                    <div class=article-wrap>
-                        <a href="indexSub.html"><?php echo $array["contents"][$i] ?></a>
-                    </div>
-                    <a href="indexSub.html">ここ</a>
-                    <span class="good btn">いいね</span>
                 </div>
-            </div>
-            <div class=article>
-                <div class=text-box>
-                    <div class=janleImage>
+                <div class=article>
+                    <div class=text-box>
+                        <div class=janleImage>
+                        </div>
+                        <div class=article-title>
+                            <a href="indexSub.php"><?php $i++; echo $array["title"][$i]; ?></a>
+                        </div>
+                        <div class=article-wrap>
+                            <a href="indexSub.php"><?php echo $array["contents"][$i];?></a>
+                        </div>
+                        <span class="good btn">いいね</span>
                     </div>
-                    <div class=article-title>
-                        <a href="indexSub.html"><?php $i++; echo $array["title"][$i]; ?></a>
-                    </div>
-                    <div class=article-wrap>
-                        <a href="indexSub.html"><?php echo $array["contents"][$i];?></a>
-                    </div>
-                    <span class="good btn">いいね</span>
                 </div>
             </div>
         </div>
-        <div class=fakeAdvertisement>
-       </div>
        	<form action="indexSub.php" method="post">
             <div class=post>
                 <div class=post-logo>
