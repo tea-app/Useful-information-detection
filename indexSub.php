@@ -15,24 +15,75 @@
         <header>
             <div class=container>
                 <div class=header-list>
-                    <a href="index.html">トップページ</a>
+                    <a href="index.php">トップページ</a>
                 </div>
                 <div class=header-list>
                     <a>じゃんる</a>
                 </div>
                 <div class=header-list>
-                    <a>interesting</a>
+                    <a>ニュース</a>
                 </div>
                 <div class=header-list>
-                    <a>mod</a>
+                    <a>おもしろ画像</a>
                 </div>
                 <div class=header-list>
-                    <a>2チャンネル</a>
+                    <a>動画</a>
+                </div>
+                <div class=header-list>
+                    <a>アニメ</a>
+                </div>
+                <div class=header-list>
+                    <a>萌え</a>
+                </div>
+                <div class=header-list>
+                    <a>政治・経済</a>
+                </div>
+                <div class=header-list>
+                    <a href="http://kemono-friends.jp">ふれんず</a>
+                </div>
+                <div class=header-list>
+                    <a>アダルト</a>
                 </div>
             </div>
         </header>
         <div class=header-title>
-            <p>タイトル</p>
+            <p>Scientific Glasses 速報</p>
+        </div>
+        <div class=titles>
+        </div>
+        <diV class=sidebar>
+            <div class=sidebar-left>
+                <div class=sidebar-box>
+                </div>
+            </div>
+            <div class=sidebar-right>
+                <div class=sidebar-box>
+                </div>
+            </div>
+        </diV>
+        <div class=design>
+            <div class=main-bar>
+                <p>＜人気記事まとめ＞</p>
+            </div>
+            <div class=side-tagFirst>
+                <p>＜PR＞</p>
+            </div>
+            <div class=side-tagSecond>
+                <p>＜PR＞</p>
+            </div>
+            <div class=fakeAdvertisement>
+                <div class=fakeAdvertisement-first>
+                </div>
+                <div class=fakeAdvertisement-second>
+                </div>
+            </div>
+        </div>
+        <div class=producerProfile>
+            <div class=producerProfile-bar>
+                <p>管理人</p>
+            </div>
+            <div class=producerProfile-container>
+            </div>
         </div>
         <?php
              // JSONファイルのURL
@@ -50,28 +101,13 @@
 		    file_put_contents("data.json" , $json);
 		    // 【重要！】ここから下に記事のタイトル内容を書いて欲しい！
 		?>
-        <div class=post>
-            <div class=post-logo>
-            　　<p>投稿</p>
-            </div>
-            <div class=post-title>
-                <p>タイトル</p>
-                <input type="text" name="example1" maxlength="20">
-            </div>
-            <div class=post-titleBox>
-            </div>
-            <div class=post-article>
-                <p>記事</p>
-                <textarea rows="4"cols="40">ここに記事をお書きください</textarea>
-                <input type="button" value="投稿">
-            </div>
-            <div class=post-articleBox>
+        <div class=articles>
+            <div class=container-article>
             </div>
         </div>
         <footer>
         </footer>
         <p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>
-        
         <!--js読み込み-->
         <a href="http://jquery.com/">jQuery</a>
         <link href="jquery.js" type="text/js" rel="stylesheet">
