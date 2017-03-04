@@ -6,15 +6,15 @@ body {
     width: 100%;
 }
 
+
 /*以下 ヘッダー*/
 header {
     top: 0px;
     height: 40px;
     width: 100%;
-    background-color: aqua;
-    /*opacity: 0.5;*/
+    background-color: rgb(94, 80, 154);
     position: fixed; /*画面上に固定*/
-    z-index: 10;　/*要素の重なりの順番を指定*/
+    z-index: 999;　/*要素の重なりの順番を指定*/
 }
 
 .header-list {
@@ -22,13 +22,13 @@ header {
     width: 10%;
     float: left;
     display: block;
-    border: 0.5px solid rgba(24, 202, 255, 0.86);
+    border: 1.0px solid #B2B9B5;
     text-align: center;
     transition: all 0.5s;
 }
 
 .header-list:hover {
-  background-color: rgba(56, 178, 255, 0.5);
+  background-color: rgba(251, 253, 255, 0.5);
 }
 
 .header-list a {
@@ -40,37 +40,186 @@ header {
     text-decoration: none;
 }
 
+
 /*以下 タイトル*/
 .header-title {
-    top: 40px;
+    top: 75px;
+    left: 4.5%;
     position: absolute;
-    height: 120px;
-    width: 100%;
-    background-color: azure;
+    height: 240px;
+    width: 91%;
+    border: 2.0px solid #B2B9B5;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 10;
 }
 
 .header-title p { 
-    color: #ffffff;
-    padding-top: 20px;
+    color: #95989A;
+    padding-top: 85px;
     text-align: center; /*中央揃え*/
-    font-size: 60px;
-    font-style: oblique;
+    font-size: 50px;
+    font-family: serif;
 }
+
+/*以下 サイドバー*/
+.sidebar-left {
+    top: 350px;
+    position: absolute;
+    height: 3723px;
+    width: 5%;
+    border-right: 2.0px solid #B2B9B5;
+}
+
+.sidebar-right {
+    top: 350px;
+    right: 5%;
+    position: absolute;
+    height: 3723px;
+    border-left: 2.0px solid #B2B9B5;
+}
+
+
+/*以下 タイトル一覧*/
+.titles {
+    top: 350px;
+    left: 10%;
+    position: absolute;
+    margin-top: 46px;
+    height: 260px;
+    width: 80%;
+    border: 2.0px solid #B2B9B5;
+}
+
+
+/*以下 デザイン*/
+.main-bar {
+    top: 702px;
+    left: 5%;
+    position: absolute;
+    height: 30px;
+    width: 70%;
+    background-color: #492f83;
+}
+
+.main-bar p {
+    color: #FFFFFF;
+    text-align: center; /*中央揃え*/
+    font-size: 28px;
+    font-family: serif;
+}
+
+.side-tagFirst {
+    top: 942px;
+    right: 5%;
+    position: absolute;
+    height 18px;
+    width: 18%;
+    background-color: black;
+}
+
+.side-tagFirst p {
+    color: #FFFFFF;
+    text-align: left; /*左揃え*/
+    padding-left: 10px;
+    font-size: 18px;
+    font-family: serif;
+}
+
+.side-tagSecond {
+    top: 1198px;
+    right: 5%;
+    position: absolute;
+    height 18px;
+    width: 18%;
+    background-color: black;
+}
+
+.side-tagSecond p {
+    color: #FFFFFF;
+    text-align: left; /*左揃え*/
+    padding-left: 10px;
+    font-size: 18px;
+    font-family: serif;
+}
+
+.fakeAdvertisement-first {
+    top: 980px;
+    right: 5.8%;
+    position: absolute;
+    height: 180px;
+    width: 17%;
+    border: 2.0px solid #B2B9B5;
+    background-image: url(lookingSNS.jpg);
+    background-size: cover;
+}
+
+.fakeAdvertisement-second {
+    top: 1236px;
+    right: 5.8%;
+    position: absolute;
+    height: 180px;
+    width: 17%;
+    border: 2.0px solid #B2B9B5;
+    background-image: url(newspaper.jpg);
+    background-size: cover;
+}
+
+
+/*以下　製作者の自己紹介*/
+.producerProfile-bar {
+    top: 1454px;
+    right: 5%;
+    position: absolute;
+    padding-left: 10px;
+    height: 18px;
+    width: 18%;
+    background-color: black;
+}
+
+.producerProfile-bar p {
+    color: #FFFFFF;
+    text-align: left; /*左揃え*/
+    padding-left: 10px;
+    font-size: 18px;
+    font-family: serif;
+}
+
+.producerProfile-container {
+    top: 1492px;
+    right: 7.0%;
+    position: absolute;
+    height: 1500px;
+    width: 15%;
+    border: 2.0px solid #B2B9B5;
+}
+
 
 /*以下 記事*/
 .articles {
-    top: 160px;
+    top: 350px;
     position: absolute;
-    height: 3000px;
+    height: 3723px;
     width: 100%;
-    background-color: #ffffff;
+    border-top: 2.0px solid #B2B9B5;
+    border-bottom: 2.0px solid #B2B9B5;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.container-article {
+    top: 420px;
+    left: 120px;
+    position: absolute;
+    height: 2530px;
+    width: 65%;
+    border: 2.0px solid #B2B9B5;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .text-box {
-    margin: 50px 50px 80px 100px;
+    margin: 50px 50px 80px 40px;
     padding: 15px 0px 15px 10px;
     height:  150px;
-    width: 60%;
+    width: 90%;
     background-color: #FFFFFF;
     position: relative;
     border: 1.0px solid #000000;
@@ -90,20 +239,10 @@ header {
     float: left;
 }
 
-.fakeAdvertisement {
-    position: fixed;
-    top: 210px;
-    right: 4%;
-    background-image: url(blackBord.jpg);
-    background-size: cover;
-    height: 200px;
-    width: 300px;
-    z-index: 999;    
-}
 
 /*以下 投稿欄*/
 .post {
-    top: 2540px;
+    top: 3300px;
     position: absolute;
     margin: 50px 50px 80px 100px;
     height: 300px;
@@ -158,11 +297,12 @@ header {
     font-size: 20px;
 }
 
+
 /*以下トップへ戻るボタン*/
 #pageTop {
   position: fixed;
-  bottom: 20px;
-  right: 20px;  
+  bottom: 25px;
+  right: 25px;  
 }
  
 #pageTop a {
@@ -170,8 +310,8 @@ header {
   z-index: 999;
   padding: 8px 0 0 8px;
   border-radius: 30px;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   background-color: #9FD6D2;
   color: #fff;
   font-weight: bold;
@@ -181,8 +321,8 @@ header {
 
 #pageTop i {
   position: fixed;
-  bottom: 32px;
-  right: 29px;
+  bottom: 39px;
+  right: 36px;
 }
  
 #pageTop a:hover {
@@ -192,9 +332,9 @@ header {
 
 /*以下 フッター*/
 footer {
-    top: 3160px;
+    top: 4073px;
     position: absolute;
-    height: 100px;
+    height: 80px;
     width: 100%;
     background-color: #ffe7e7;
     opacity: 0.8;
