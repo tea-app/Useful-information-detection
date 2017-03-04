@@ -53,7 +53,8 @@ header {
     color: #ffffff;
     padding-top: 20px;
     text-align: center; /*中央揃え*/
-    font-size: 60px; 
+    font-size: 60px;
+    font-style: oblique;
 }
 
 /*以下 記事*/
@@ -91,6 +92,17 @@ header {
 
 .article span {
     font-size: 15px;
+}
+
+.fakeAdvertisement {
+    position: fixed;
+    top: 210px;
+    right: 4%;
+    background-image: url(blackBord.jpg);
+    background-size: cover;
+    height: 200px;
+    width: 300px;
+    z-index: 999;    
 }
 
 /*以下 投稿欄*/
