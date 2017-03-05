@@ -160,7 +160,7 @@ header {
     height: 180px;
     width: 17%;
     border: 2.0px solid #B2B9B5;
-    background-image: url(newspaper.jpg);
+    background-image: url(humanShadow.jpg);
     background-size: cover;
 }
 
@@ -227,6 +227,16 @@ header {
 
 .article-title {
     margin: 0px 20px 0px 200px;
+}
+
+.endTime-box {
+    bottom: 20px;
+    right: 40px;
+    position: absolute;
+    height: 50px;
+    width: 40%;
+    border: 1.0px solid #000000;
+    z-index: 999;
 }
 
 .janleImage {
