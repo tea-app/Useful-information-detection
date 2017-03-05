@@ -18,7 +18,7 @@
                     <a href="index.php">トップページ</a>
                 </div>
                 <div class=header-list>
-                    <a>じゃんる一覧</a>
+                    <a>じゃんる</a>
                 </div>
                 <div class=header-list>
                     <a>ニュース</a>
@@ -33,7 +33,7 @@
                     <a>アニメ</a>
                 </div>
                 <div class=header-list>
-                    <a>萌え</a>
+                    <a>声優</a>
                 </div>
                 <div class=header-list>
                     <a>政治・経済</a>
@@ -42,7 +42,7 @@
                     <a href="http://kemono-friends.jp">ふれんず</a>
                 </div>
                 <div class=header-list>
-                    <a>アダルト</a>
+                    <a>Amazon</a>
                 </div>
             </div>
         </header>
@@ -132,6 +132,10 @@
                                    ?>
                             </a>
                         </div>
+                        <div class=endTime>
+                            <div class=endTime-box>
+                            </div>
+                        </div>
                         <span class="good btn"><?php echo $array["goodNum"][$titleNum]?>いいね</span>
                     </div>
                 </div>
@@ -152,18 +156,9 @@
                                 ?>
                             </a>
                         </div>
-                        <span class="good btn"><?php echo $array["goodNum"][$titleNum]?>いいね</span>
-                    </div>
-                </div>
-                <div class=article>
-                    <div class=text-box>
-                        <div class=janleImage>
-                        </div>
-                        <div class=article-title>
-                            <a href="indexSub.php?no=<?php $titleNum++; echo $titleNum; ?>"><?php echo $array["title"][$titleNum] ?></a>
-                        </div>
-                        <div class=article-wrap>
-                            <a href="indexSub.php?no=<?php echo $titleNum ?>"><?php echo $array["contents"][$titleNum] ?></a>
+                        <div class=endTime>
+                            <div class=endTime-box>
+                            </div>
                         </div>
                         <span class="good btn"><?php echo $array["goodNum"][$titleNum]?>いいね</span>
                     </div>
@@ -178,18 +173,9 @@
                         <div class=article-wrap>
                             <a href="indexSub.php?no=<?php echo $titleNum ?>"><?php echo $array["contents"][$titleNum] ?></a>
                         </div>
-                        <span class="good btn"><?php echo $array["goodNum"][$titleNum]?>いいね</span>
-                    </div>
-                </div>
-                <div class=article>
-                    <div class=text-box>
-                        <div class=janleImage>
-                        </div>
-                        <div class=article-title>
-                            <a href="indexSub.php?no=<?php $titleNum++; echo $titleNum; ?>"><?php echo $array["title"][$titleNum] ?></a>
-                        </div>
-                        <div class=article-wrap>
-                            <a href="indexSub.php?no=<?php echo $titleNum ?>"><?php echo $array["contents"][$titleNum] ?></a>
+                        <div class=endTime>
+                            <div class=endTime-box>
+                            </div>
                         </div>
                         <span class="good btn"><?php echo $array["goodNum"][$titleNum]?>いいね</span>
                     </div>
@@ -204,18 +190,9 @@
                         <div class=article-wrap>
                             <a href="indexSub.php?no=<?php echo $titleNum ?>"><?php echo $array["contents"][$titleNum] ?></a>
                         </div>
-                        <span class="good btn"><?php echo $array["goodNum"][$titleNum]?>いいね</span>
-                    </div>
-                </div>
-                <div class=article>
-                    <div class=text-box>
-                        <div class=janleImage>
-                        </div>
-                        <div class=article-title>
-                            <a href="indexSub.php?no=<?php $titleNum++; echo $titleNum; ?>"><?php echo $array["title"][$titleNum] ?></a>
-                        </div>
-                        <div class=article-wrap>
-                            <a href="indexSub.php?no=<?php echo $titleNum ?>"><?php echo $array["contents"][$titleNum] ?></a>
+                        <div class=endTime>
+                            <div class=endTime-box>
+                            </div>
                         </div>
                         <span class="good btn"><?php echo $array["goodNum"][$titleNum]?>いいね</span>
                     </div>
@@ -230,6 +207,10 @@
                         <div class=article-wrap>
                             <a href="indexSub.php?no=<?php echo $titleNum ?>"><?php echo $array["contents"][$titleNum] ?></a>
                         </div>
+                        <div class=endTime>
+                            <div class=endTime-box>
+                            </div>
+                        </div>
                         <span class="good btn"><?php echo $array["goodNum"][$titleNum]?>いいね</span>
                     </div>
                 </div>
@@ -243,7 +224,61 @@
                         <div class=article-wrap>
                             <a href="indexSub.php?no=<?php echo $titleNum ?>"><?php echo $array["contents"][$titleNum] ?></a>
                         </div>
-                        <a href="indexSub.html">ここ</a>
+                        <div class=endTime>
+                            <div class=endTime-box>
+                            </div>
+                        </div>
+                        <span class="good btn"><?php echo $array["goodNum"][$titleNum]?>いいね</span>
+                    </div>
+                </div>
+                <div class=article>
+                    <div class=text-box>
+                        <div class=janleImage>
+                        </div>
+                        <div class=article-title>
+                            <a href="indexSub.php?no=<?php $titleNum++; echo $titleNum; ?>"><?php echo $array["title"][$titleNum] ?></a>
+                        </div>
+                        <div class=article-wrap>
+                            <a href="indexSub.php?no=<?php echo $titleNum ?>"><?php echo $array["contents"][$titleNum] ?></a>
+                        </div>
+                        <div class=endTime>
+                            <div class=endTime-box>
+                            </div>
+                        </div>
+                        <span class="good btn"><?php echo $array["goodNum"][$titleNum]?>いいね</span>
+                    </div>
+                </div>
+                <div class=article>
+                    <div class=text-box>
+                        <div class=janleImage>
+                        </div>
+                        <div class=article-title>
+                            <a href="indexSub.php?no=<?php $titleNum++; echo $titleNum; ?>"><?php echo $array["title"][$titleNum] ?></a>
+                        </div>
+                        <div class=article-wrap>
+                            <a href="indexSub.php?no=<?php echo $titleNum ?>"><?php echo $array["contents"][$titleNum] ?></a>
+                        </div>
+                        <div class=endTime>
+                            <div class=endTime-box>
+                            </div>
+                        </div>
+                        <span class="good btn"><?php echo $array["goodNum"][$titleNum]?>いいね</span>
+                    </div>
+                </div>
+                <div class=article>
+                    <div class=text-box>
+                        <div class=janleImage>
+                        </div>
+                        <div class=article-title>
+                            <a href="indexSub.php?no=<?php $titleNum++; echo $titleNum; ?>"><?php echo $array["title"][$titleNum] ?></a>
+                        </div>
+                        <div class=article-wrap>
+                            <a href="indexSub.php?no=<?php echo $titleNum ?>"><?php echo $array["contents"][$titleNum] ?></a>
+                        </div>
+                        <div class=endTime>
+                            <div class=endTime-box>
+                            </div>
+                        </div>
                         <span class="good btn"><?php echo $array["goodNum"][$titleNum]?>いいね</span>
                     </div>
                 </div>
@@ -256,6 +291,10 @@
                         </div>
                         <div class=article-wrap>
                             <a href="indexSub.php?no=<?php echo $titleNum ?>"><?php echo $array["contents"][$titleNum];?></a>
+                        </div>
+                        <div class=endTime>
+                            <div class=endTime-box>
+                            </div>
                         </div>
                         <span class="good btn"><?php echo $array["goodNum"][$titleNum]?>いいね</span>
                     </div>
