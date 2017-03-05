@@ -26,6 +26,16 @@
     border: 2.0px solid #B2B9B5;
 }
 
+.articles input {
+    bottom: 20px;
+    right: 20px;
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    text-align: right;
+    font-size: 8px;
+}
+
 .article span {
     position: absolute;
     bottom: 10px;
