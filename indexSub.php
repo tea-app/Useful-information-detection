@@ -100,8 +100,10 @@
         <div class=articles>
             <div class=containerArea>
                  <div class=title-box>
+                    <?php echo $array["title"][$_GET['no']] ?>
                  </div>
                  <div class=article-box>
+                    <?php echo $array["contents"][$_GET['no']] ?>
                  </div>
             </div>
         </div>
