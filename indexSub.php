@@ -105,6 +105,7 @@
                  <div class=article-box>
                     <?php echo $array["contents"][$_GET['no']] ?>
                  </div>
+                <input type="submit" name="send" value="いいね">
             </div>
         </div>
         <footer>
