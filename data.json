@@ -11,16 +11,12 @@
         100,
         2
     ],
-    "submissionTime": [],
-    "remainingTime": [],
-    "maxComment": [
-        1,
-        1
+    "submissionTime": [
+        "10:35:32",
+        "12:35:21"
     ],
-    "comment": [
-        "最高！",
-        "神！！",
-        "ゴミ",
-        "oppai"
+    "remainingTime": [
+        "11:35:32",
+        "13:35:21"
     ]
 }
