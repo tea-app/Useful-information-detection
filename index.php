@@ -3,13 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>glasoku</title>
-        <link href="reset.css" type="text/css" rel="stylesheet">
-        <link href="scrol.js" type="text/javascript" rel="stylesheet">
-        <link href="stylesheet.css" type="text/css" rel="stylesheet">
+        <link href="assets/css/reset.css" type="text/css" rel="stylesheet">
+        <link href="assets/css/stylesheet.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link href="jquery.js" type="text/js" rel="stylesheet">
-        <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     </head>
     <body>
         <header>
@@ -1194,8 +1190,12 @@
         <footer>
         </footer>
         <p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>
-
+        
         <!--js読み込み-->
-        <script type="text/javascript" src="scrol.js"></script>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="assets/js/jquery.js" type="text/javascript"></script>
+        <script src="assets/js/scrol.js" type="text/javascript"></script>
+
     </body>
 </html>

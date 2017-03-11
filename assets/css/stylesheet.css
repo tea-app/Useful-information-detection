@@ -163,7 +163,7 @@ header {
     height: 180px;
     width: 17%;
     border: 2.0px solid #B2B9B5;
-    background-image: url(lookingSNS.jpg);
+    background-image: url(/assets/img/lookingSNS.jpg);
     background-size: cover;
 }
 
@@ -174,7 +174,7 @@ header {
     height: 180px;
     width: 17%;
     border: 2.0px solid #B2B9B5;
-    background-image: url(humanShadow.jpg);
+    background-image: url(/assets/img/humanShadow.jpg);
     background-size: cover;
 }
 
@@ -267,7 +267,7 @@ header {
     height: 120px;
     width: 180px;
     border: 5px solid #1c2119;
-    background-image: url(macWacthCat.jpg);
+    background-image: url(/assets/img/macWacthCat.jpg);
     background-size: cover;
     padding: 10px 0px 15px 10px;
     float: left;
