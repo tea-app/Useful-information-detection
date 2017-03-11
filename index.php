@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <title>glasoku</title>
         <link href="assets/css/reset.css" type="text/css" rel="stylesheet">
-        <link href="assets/css/stylesheet.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="assets/css/index.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -1195,7 +1195,6 @@
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="assets/js/jquery.js" type="text/javascript"></script>
-        <script src="assets/js/scrol.js" type="text/javascript"></script>
-
+        <script src="assets/js/pagetop.js" type="text/javascript"></script>
     </body>
 </html>
