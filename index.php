@@ -8,9 +8,13 @@ $jsonFiles  = preg_grep($regex, $files);
 // jsonをエンコードし、配列に格納
 $articles = [];
 foreach($jsonFiles as $jsonFile) {
-    $path       = $dbDir . '/'. $jsonFile;
-    $json       = file_get_contents($path);
-    $articles[] = json_decode($json);
+    $path           = $dbDir . '/'. $jsonFile;
+    $json           = file_get_contents($path);
+    
+    $article        = json_decode($json);
+    $id             = explode('.json', $jsonFile)[0];
+    $article->uri   = 'article.php?id=' . $id;
+    $articles[]     = $article;
 }
 
 ?>
@@ -110,10 +114,10 @@ foreach($jsonFiles as $jsonFile) {
                         <div class=janleImage>
                         </div>
                         <div class=article-title>
-                            <a href="#"><?php echo $article->title; ?></a>
+                            <a href="<?php echo $article->uri; ?>"><?php echo $article->title; ?></a>
                         </div>
                         <div class=article-wrap>
-                            <a href="#"><?php echo $article->contents; ?> </a>
+                            <a href="<?php echo $article->uri; ?>"><?php echo $article->contents; ?> </a>
                         </div>
                         <div class=endTime>
                             <div class=endTime-box>
