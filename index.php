@@ -144,11 +144,12 @@ foreach($jsonFiles as $jsonFile) {
                 </div>
             </div>
         </form>
+        <footer>
+        </footer>
         <p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>        
         <!--js読み込み-->
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="assets/js/jquery.js" type="text/javascript"></script>
         <script src="assets/js/pagetop.js" type="text/javascript"></script>
     </body>
 </html>
