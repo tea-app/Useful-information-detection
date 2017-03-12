@@ -1,3 +1,30 @@
+<?php
+$count = 2;
+// JSONファイルのURL
+$commentNumsonUrl = "data.json";
+// JSONファイルの中身を取得
+$commentNumson = file_get_contents($commentNumsonUrl);
+// JSON($commentNumson)を連想配列に変換(デコード)する
+$commentNumson = mb_convert_encoding($commentNumson, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+$array = json_decode( $commentNumson , true ) ;
+// タイトル番号（ページによって変える必要あり）
+$titleNum = 0;
+// コメント用番号（ページによって変える必要あり）
+$commentNum = 0;
+$commentNumZip = 0;
+// 配列の追加
+if ($_POST["title"] != null) {
+    array_push($array["title"], $_POST["title"]);
+    array_push($array["contents"], $_POST["contents"]);
+    // 連想配列をJSONファイルに出力する
+    $json = json_encode( $array , JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES ) ;
+    file_put_contents("data.json" , $json);
+}
+
+// 連想配列をJSONファイルに出力する
+$json = json_encode( $array , JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES ) ;
+file_put_contents("data.json" , $json);
+?>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -42,73 +69,14 @@
                 </div>
             </div>
         </header>
-               <?php
-                $count = 2;
-               
-            /*  ----初期化_開始----- 
-            $_POST["title"]=null;
-		    $_POST["contents"]=null;
-		    // 連想配列($array)
-		    $array = array(
-			"title" => ["合宿所で!?カメムシ大量発生!!", "男は辛いよ"],
-			"contents" => ["合宿所でカメムシが大量発生する事件が起きました。皆様電球の穴には気をつけて下さい!", "はい。そのまんま。男は辛いよ!"],
-			"goodNum" => [100, 2],
-			"submissionTime" => ["10:35:32", "12:35:21"], //提出時間
-			"remainingTime" => ["11:35:32", "13:35:21"], //消去時間
-			//"maxComment" => [1, 1],
-			//"comment" => ["最高！", "神！！", "ゴミ", "oppai"]
-		    );
-		    // 連想配列($array)をJSONに変換(エンコード)する
-		    $commentNumson = json_encode( $array , JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE| JSON_UNESCAPED_SLASHES ) ;
-		    file_put_contents("data.json" , $commentNumson);
-		     -----初期化_終了----- */
-            // JSONファイルのURL
-		    $commentNumsonUrl = "data.json";
-		    // JSONファイルの中身を取得
-		    $commentNumson = file_get_contents($commentNumsonUrl);
-		    // JSON($commentNumson)を連想配列に変換(デコード)する
-		    $commentNumson = mb_convert_encoding($commentNumson, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
-		    $array = json_decode( $commentNumson , true ) ;
-		    // タイトル番号（ページによって変える必要あり）
-		    $titleNum = 0;
-		    // コメント用番号（ページによって変える必要あり）
-		    $commentNum = 0;
-		    $commentNumZip = 0;
-		    // 配列の追加
-		    if ($_POST["title"] != null) {
-	            array_push($array["title"], $_POST["title"]);
-	            array_push($array["contents"], $_POST["contents"]);
-	            // 連想配列をJSONファイルに出力する
-	            $json = json_encode( $array , JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES ) ;
-	            file_put_contents("data.json" , $json);
-	        }
-       ?>
         <div class=header-title>
             <p>Scientific Glasses 速報</p>
         </div>
         <div class=titles>
             <div class=title-box>
+                <?php foreach(range(0, 9) as $i) { ?>
                 <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
-                <a href="indexSub.php">睡眠は必要か不要か</a>
+                <?php } //endforeach ?>
             </div>
         </div>
         <diV class=sidebar>
@@ -157,7 +125,7 @@
                         </div>
                         <div class=article-wrap>
                             <a href="indexSub.php?no=<?php echo $titleNum ?>">
-                                <?php echo $array["contents"][$titleNum]
+                                <?php echo $array["contents"][$titleNum];
                                    // for ($commentNum = $commentNum; $commentNum <= $array["maxComment"][$commentNum]; $commentNum++) {
                                    //     echo $array["comment"][$commentNum];
                                    // }
@@ -166,93 +134,76 @@
                         </div>
                         <div class=endTime>
                             <div class=endTime-box>
-                              <?php
+                                <?php
                                 date_default_timezone_set('Asia/Tokyo');
 
                                 require_once("Time.php");
                                 require_once("KeepTime.php");
                                 require_once("Keep.php");
-                                // require_once("test.php");
 
                                 file_get_contents('data.json');
-                                $now = Time::now();
-                                $first = true;
-                                $second = true;
-                                $third = true;
-                                $forth = true;
-                                $fifth = true;
-                                $sixth = true;
-                                $seventh = true;
-                                $eighth = true;
-                                $nineth = true;
-                                $tenth = true;
-
-                                //var_dump($_POST);
+                                $now    = Time::now();
+                                $first  = true;
                                 
                                 /////// when run send 
                                 if(isset($_POST["send"])) {
-                                  $limitTime = date('H:i:s', strtotime($now ."+ ". 1 ."hour"));
+                                    $limitTime = date('H:i:s', strtotime($now ."+ ". 1 ."hour"));
 
-                                  $key = htmlspecialchars($_POST["send"], ENT_QUOTES, "UTF-8");
-                                // JSONファイルのURL
-                                  $jsonUrl = "data.json";
-                                // JSONファイルの中身を取得
-                                  $json = file_get_contents($jsonUrl);
-                                // JSON($json)を連想配列に変換(デコード)する
-                                  $json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
-                                  $array = json_decode( $json , true ) ;
+                                    $key = htmlspecialchars($_POST["send"], ENT_QUOTES, "UTF-8");
+                                    // JSONファイルのURL
+                                    $jsonUrl = "data.json";
+                                    // JSONファイルの中身を取得
+                                    $json = file_get_contents($jsonUrl);
+                                    // JSON($json)を連想配列に変換(デコード)する
+                                    $json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+                                    $array = json_decode( $json , true ) ;
 
 
-                                  if (isset($_POST['first'])) {
-                                    if ($_POST['first']) {//true or false
+                                    if (isset($_POST['first'])) {
+                                        if ($_POST['first']) {//true or false
 
-                                      $array = array(
-                                        "title" => ["合宿所で!?カメムシ大量発生!!", "男は辛いよ"],
-                                        "contents" => ["合宿所でカメムシが大量発生する事件が起きました。皆様電球の穴には気をつけて下さい!", "はい。そのまんま。男は辛いよ!"],
-                                        "goodNum" => [0, 0],
-                                        "submissionTime" => [$now],
-                                        "remainingTime" => [$limitTime]
-                                      );
+                                            $array = array(
+                                                "title" => ["合宿所で!?カメムシ大量発生!!", "男は辛いよ"],
+                                                "contents" => ["合宿所でカメムシが大量発生する事件が起きました。皆様電球の穴には気をつけて下さい!", "はい。そのまんま。男は辛いよ!"],
+                                                "goodNum" => [0, 0],
+                                                "submissionTime" => [$now],
+                                                "remainingTime" => [$limitTime]
+                                            );
 
-                                      // 連想配列($array)をJSONに変換(エンコード)する
-                                      $json = json_encode($array, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE| JSON_UNESCAPED_SLASHES);
-                                      file_put_contents("data.json", $json);
+                                            // 連想配列($array)をJSONに変換(エンコード)する
+                                            $json = json_encode($array, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE| JSON_UNESCAPED_SLASHES);
+                                            file_put_contents("data.json", $json);
+                                        }
+
+                                        $first = false;
                                     }
 
-                                    $first = false;
-                                  }
+                                    $url = 'data.json';
+                                    $now = file_get_contents($url);
+                                    $json = mb_convert_encoding($now, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+                                    $obj = json_decode($json,true);
+                                    $now = Time::now();
 
-                                  $url = 'data.json';
-                                  $now = file_get_contents($url);
-                                  $json = mb_convert_encoding($now, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
-                                  $obj = json_decode($json,true);
-                                  $now = Time::now();
+                                    switch($key) {
+                                        case "更新":
+                                            break;
+                                        case "増加":
+                                            $array["goodNum"][$titleNum]++;
+                                            $array["remainingTime"][$titleNum] = date('H:i:s', strtotime($array["submissionTime"][$titleNum] ."+ ". $array["goodNum"][$titleNum] ." minute"));
 
-                                  switch($key) {
-                                    case "更新":
-                                      break;
-                                    case "増加":
-                                    //$array["goodNum"][$_GET['no']]++;//limitを加算
-                                      $array["goodNum"][$titleNum]++;
-                                      $array["remainingTime"][$titleNum] = date('H:i:s', strtotime($array["submissionTime"][$titleNum] ."+ ". $array["goodNum"][$titleNum] ." minute"));
-                                      //var_dump($array["goodNum"][0]);
-                                      //var_dump($array["remainingTime"][0]);
-
-                                    // 連想配列をJSONファイルに出力する
-                                      $json = json_encode( $array , JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES ) ;
-                                      file_put_contents("data.json" , $json);
-                                      break;
-                                    default:
-                                      break;
-                                  }
-                                  //var_dump($first);
+                                        // 連想配列をJSONファイルに出力する
+                                            $json = json_encode( $array , JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES ) ;
+                                            file_put_contents("data.json" , $json);
+                                            break;
+                                        default:
+                                            break;
+                                    } 
                                 }
                                 ///////
                                 
-                               echo "提出時刻".$obj["submissionTime"][$titleNum]; //提出された時間
-                               echo "終了時刻".$obj["remainingTime"][$titleNum];
-                              ?>
-
+                                echo "提出時刻".$obj["submissionTime"][$titleNum]; //提出された時間
+                                echo "終了時刻".$obj["remainingTime"][$titleNum];
+                                ?>
 
                             </div>
                         </div>
@@ -264,13 +215,11 @@
        	<form action="index.php" method="post">
             <div class=post>
                 <div class=post-logo>
-            　   　<p>投稿</p>
+                    <p>投稿</p>
                 </div>
                 <div class=post-title>
                     <p>タイトル</p>
                     <input type="text" name="title" maxlength="20">
-                </div>
-                <div class=post-titleBox>
                 </div>
                 <div class=post-article>
                     <p>記事</p>
@@ -279,31 +228,9 @@
                         <input type="submit" name="send" value="投稿">
                     </form>
                 </div>
-                <div class=post-articleBox>
-                </div>
             </div>
         </form>
-        <?php
-        /*
-                // 配列の追加
-	            array_push($array["title"], $_POST["title"]);
-	            array_push($array["contents"], $_POST["contents"]);
-                // 連想配列をJSONファイルに出力する
-	            $json = json_encode( $array , JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES ) ;
-	            file_put_contents("data.json" , $json);
-        
-	        // 配列の追加
-	        array_push($array["title"], $_POST["title"]);
-	        array_push($array["contents"], $_POST["contents"]);
-	        */
-            // 連想配列をJSONファイルに出力する
-	        $json = json_encode( $array , JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES ) ;
-	        file_put_contents("data.json" , $json);
-		?>
-        <footer>
-        </footer>
-        <p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>
-        
+        <p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>        
         <!--js読み込み-->
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
