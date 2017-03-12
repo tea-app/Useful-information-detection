@@ -126,19 +126,19 @@ foreach($jsonFiles as $jsonFile) {
             <?php } //endforeach ?>
             </div>
         </div>
-       	<form action="index.php" method="post">
+       	<form action="post.php" method="post">
             <div class=post>
                 <div class=post-logo>
                     <p>投稿</p>
                 </div>
                 <div class=post-title>
                     <p>タイトル</p>
-                    <input type="text" name="title" maxlength="20">
+                    <input type="text" name="title" maxlength="20" placeholder="タイトル">
                 </div>
                 <div class=post-article>
                     <p>記事</p>
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method ="post">
-                        <textarea name="contents" rows="4"cols="40">ここに記事をお書きください</textarea>
+                        <textarea name="contents" rows="4"cols="40" placeholder="ここに記事をお書きください"></textarea>
                         <input type="submit" name="send" value="投稿">
                     </form>
                 </div>
