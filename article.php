@@ -4,13 +4,10 @@
         <meta charset="utf-8">
         <title>glasoku</title>
         <!-- jQuery -->
-        <link href="reset.css" type="text/css" rel="stylesheet">
-        <link href="scrol.js" type="text/javascript" rel="stylesheet">
-        <link href="stylesheet.css" type="text/css" rel="stylesheet">
-        <link href="stylesheetSub.css" type="text/css" rel="stylesheet">
+        <link href="assets/css/reset.css" type="text/css" rel="stylesheet">
+        <link href="assets/css/index.css" type="text/css" rel="stylesheet">
+        <link href="assets/css/article.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link href="jquery.js" type="text/js" rel="stylesheet">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     </head>
     <body>
         <header>
@@ -81,38 +78,24 @@
             <div class=producerProfile-container>
             </div>
         </div>
-        <?php
-             // JSONファイルのURL
-		    $jsonUrl = "data.json";
-		    // JSONファイルの中身を取得
-		    $json = file_get_contents($jsonUrl);
-		    // JSON($json)を連想配列に変換(デコード)する
-		    $json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
-		    $array = json_decode( $json , true ) ;
-		    // 配列の追加
-		    array_push($array["title"], $_POST["title"]);
-		    array_push($array["contents"], $_POST["contents"]);
-		    // 連想配列をJSONファイルに出力する
-		    $json = json_encode( $array , JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES ) ;
-		    file_put_contents("data.json" , $json);
-		    // 【重要！】ここから下に記事のタイトル内容を書いて欲しい！
-		?>
         <div class=articles>
             <div class=containerArea>
                  <div class=title-box>
-                    <?php echo $array["title"][$_GET['no']] ?>
+                    <?php echo 'タイトル'; ?>
                  </div>
                  <div class=article-box>
-                    <?php echo $array["contents"][$_GET['no']] ?>
+                    <?php echo 'コンテンツ'; ?>
                  </div>
-                <input type="submit" name="send" value="いいね">
+                <form action="" method="post">
+                    <input type="submit" name="send" value="いいね">
+                </form>
             </div>
         </div>
         <footer>
         </footer>
         <p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>
         <!--js読み込み-->
-        <a href="http://jquery.com/">jQuery</a>
-        <link href="jquery.js" type="text/js" rel="stylesheet">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="assets/js/pagetop.js" type="text/javascript"></script>
     </body>
 </html>
