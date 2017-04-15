@@ -1,13 +1,11 @@
 <?php
 require_once('./Database.php');
 require_once('./databaseComment.php');
-
 $dbc = new DatabaseComment();
 $db = new Database();
-
 $allc = $dbc->Acquisition();
 $all = $db->Acquisition();
-
+$article_id = $_GET['article_id'];
 ?>
 
 <!DOCTYPE html>
@@ -109,16 +107,21 @@ $all = $db->Acquisition();
                 </form>
             </div>
         </div>
+        <?php } }?>
 <!--        ここからコメント-->
-        <div class=comments>
-            <div class=comment-list>
-                <div class=content-box>
-                    <p>なんとう</p>
+        <?php foreach($allc as $one) { 
+            if ($one[1] == $_GET['article_id']) { ?>
+            <div class=comments>
+                <div class=comment-list>
+                    <div class=content-box>
+                        <p>
+                        <?php echo $one[3]; // コメント内容 ?>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
         <?php } }?>
-        <form action="addComment.php" method="post">
+        <form action="addComment.php?article_id=<?php echo $article_id ?>" method="post">
             <div class=post>
                 <div class=post-logo>
                     <p>コメント投稿</p>
