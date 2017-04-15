@@ -109,6 +109,14 @@ $all = $db->Acquisition();
                 </form>
             </div>
         </div>
+<!--        ここからコメント-->
+        <div class=comments>
+            <div class=comment-list>
+                <div class=content-box>
+                    <p>なんとう</p>
+                </div>
+            </div>
+        </div>
         <?php } }?>
         <form action="addComment.php" method="post">
             <div class=post>
