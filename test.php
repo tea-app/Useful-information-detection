@@ -1,7 +1,7 @@
 <?php
-require_once('./Database.php');
+require_once('./databaseComment.php');
 
-$db = new Database();
+$db = new DatabaseComment();
 
 //var_dump($db);
 
@@ -23,4 +23,4 @@ foreach($all as $one){
 //echo "<pre>";
 //var_dump($all);
 //echo "</pre>";
-$>
+?>

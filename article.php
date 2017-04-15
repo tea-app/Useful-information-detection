@@ -1,3 +1,15 @@
+<?php
+require_once('./Database.php');
+require_once('./databaseComment.php');
+
+$dbc = new DatabaseComment();
+$db = new Database();
+
+$allc = $dbc->Acquisition();
+$all = $db->Acquisition();
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -78,19 +90,40 @@
             <div class=producerProfile-container>
             </div>
         </div>
+        <?php foreach($all as $one) { 
+        if ($one[0] == $_GET['article_id']) { ?>
         <div class=articles>
             <div class=containerArea>
                  <div class=title-box>
-                    <?php echo $article->title; ?>
+                    <p>
+                        <?php echo $one[2]; // 記事タイトル ?>
+                     </p>
                  </div>
                  <div class=article-box>
-                    <?php echo $article->contents; ?>
+                    <p>
+                        <?php echo $one[3]; // 記事内容 ?>
+                    </p>
                  </div>
                 <form action="" method="post">
                     <input type="submit" name="send" value="いいね">
                 </form>
             </div>
         </div>
+        <?php } }?>
+        <form action="addComment.php" method="post">
+            <div class=post>
+                <div class=post-logo>
+                    <p>コメント投稿</p>
+                </div>
+                <div class=post-article>
+                    <p>コメント</p>
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method ="post">
+                        <textarea name="comment" rows="4"cols="40" placeholder="ここにコメントをお書きください"></textarea>
+                        <input type="submit" name="send" href="article.php" value="投稿">
+                    </form>
+                </div>
+            </div>
+        </form>
         <footer>
         </footer>
         <p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>

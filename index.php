@@ -4,13 +4,6 @@ require_once('./Database.php');
 $db = new Database();
 
 $all = $db->Acquisition();
-
-foreach($all as $one){
-    echo "<pre>";
-    var_dump($one[0][0]);
-    echo "</pre>";
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -108,16 +101,18 @@ foreach($all as $one){
                         <div class=genreImage>
                         </div>
                         <div class=article-title>
-                            <a href="<?php echo $article->uri; ?>"><?php echo $article->title; ?></a>
+                            <a href="article.php?article_id=<?php echo $one[0]//ID ?>"><?php echo $one[2]//タイトル; ?></a>
                         </div>
                         <div class=article-wrap>
-                            <a href="<?php echo $article->uri; ?>"><?php echo $article->contents; ?> </a>
+                            <?
+                                echo $one[3]; // 内容
+                            ?>
                         </div>
                         <div class=endTime>
                             <div class=endTime-box>
                             </div>
                         </div>
-                        <span class="good btn"> <?php?>いいね</span> //ここでいいね数をデータベースに追加
+                        <span class="good btn"> <?php?>いいね</span>
                     </div>
                 </div>
             <?php } ?>
