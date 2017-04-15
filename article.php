@@ -1,34 +1,3 @@
-<?php
-// validate
-$validate = false;
-if (isset($_GET['id'])) {
-    if (($_GET['id'] !== '')) {
-        $validate = true;
-    }
-}
-
-if ($validate) {
-    $id = $_GET['id'];
-} else {
-    header('Location: index.php');
-    exit;
-}
-
-// pass validate
-
-// get article json file
-$filename   = $id . '.json';
-$path       = __DIR__ . '/database/' . $filename;
-$json       = file_get_contents($path);
-$article    = json_decode($json);
-
-// not found data
-if (! $article) {
-    header('Location: index.php');
-    exit;
-}
-
-?>
 <!DOCTYPE html>
 <html>
     <head>

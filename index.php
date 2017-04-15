@@ -1,23 +1,5 @@
-<?php
-// jsonファイルのみを全て取得
-$dbDir      = __DIR__ . '/database';
-$regex      = '/[0-9]+\.json$/';
-$files      = scandir($dbDir);
-$jsonFiles  = preg_grep($regex, $files);
 
-// jsonをエンコードし、配列に格納
-$articles = [];
-foreach($jsonFiles as $jsonFile) {
-    $path           = $dbDir . '/'. $jsonFile;
-    $json           = file_get_contents($path);
-    
-    $article        = json_decode($json);
-    $id             = explode('.json', $jsonFile)[0];
-    $article->uri   = 'article.php?id=' . $id;
-    $articles[]     = $article;
-}
 
-?>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -34,31 +16,31 @@ foreach($jsonFiles as $jsonFile) {
                     <a href="index.php">トップページ</a>
                 </div>
                 <div class=header-list>
-                    <a>じゃんる</a>
+                    <a>政治</a>
                 </div>
                 <div class=header-list>
-                    <a>ニュース</a>
+                    <a>小説</a>
                 </div>
                 <div class=header-list>
-                    <a>おもしろ画像</a>
+                    <a>エンタメ</a>
                 </div>
                 <div class=header-list>
-                    <a>動画</a>
+                    <a>アニメ・漫画</a>
                 </div>
                 <div class=header-list>
-                    <a>アニメ</a>
+                    <a>ゲーム</a>
                 </div>
                 <div class=header-list>
-                    <a>声優</a>
+                    <a>IT</a>
                 </div>
                 <div class=header-list>
-                    <a>政治・経済</a>
+                    <a>スポーツ</a>
                 </div>
                 <div class=header-list>
                     <a href="http://kemono-friends.jp">ふれんず</a>
                 </div>
                 <div class=header-list>
-                    <a>Amazon</a>
+                    <a>その他</a>
                 </div>
             </div>
         </header>
@@ -124,13 +106,13 @@ foreach($jsonFiles as $jsonFile) {
                                 <!-- TODO: 提出時刻/終了時刻 -->
                             </div>
                         </div>
-                        <span class="good btn"> <?php echo $article->good; ?>いいね</span>
+                        <span class="good btn"> <?php?>いいね</span> //ここでいいね数をデータベースに追加
                     </div>
                 </div>
             <?php } //endforeach ?>
             </div>
         </div>
-       	<form action="post.php" method="post">
+       	<form action="add.php" method="post">
             <div class=post>
                 <div class=post-logo>
                     <p>投稿</p>
@@ -142,8 +124,8 @@ foreach($jsonFiles as $jsonFile) {
                 <div class=post-article>
                     <p>記事</p>
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method ="post">
-                        <textarea name="contents" rows="4"cols="40" placeholder="ここに記事をお書きください"></textarea>
-                        <input type="submit" name="send" value="投稿">
+                        <textarea name="article_content" rows="4"cols="40" placeholder="ここに記事をお書きください"></textarea>
+                        <input type="submit" name="send" href="article.php" value="投稿">
                     </form>
                 </div>
             </div>
