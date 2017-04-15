@@ -1,4 +1,17 @@
+<?php
+require_once('./Database.php');
 
+$db = new Database();
+
+$all = $db->Acquisition();
+
+foreach($all as $one){
+    echo "<pre>";
+    var_dump($one[0][0]);
+    echo "</pre>";
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -49,12 +62,11 @@
         </div>
         <div class=titles>
             <div class=title-box>
-                <?php foreach(range(0, 9) as $i) { ?>
                 <a href="indexSub.php">睡眠は必要か不要か</a>
-                <?php } //endforeach ?>
+                
             </div>
         </div>
-        <diV class=sidebar>
+        <div class=sidebar>
             <div class=sidebar-left>
                 <div class=sidebar-box>
                 </div>
@@ -63,7 +75,7 @@
                 <div class=sidebar-box>
                 </div>
             </div>
-        </diV>
+        </div>
         <div class=design>
             <div class=main-bar>
                 <p>＜人気記事まとめ＞</p>
@@ -90,10 +102,10 @@
         </div>
         <div class=articles>
             <div class=container-article>
-            <?php foreach($articles as $article) { ?>
+            <?php foreach($all as $one) { ?>
                 <div class=article>
                     <div class=text-box>
-                        <div class=janleImage>
+                        <div class=genreImage>
                         </div>
                         <div class=article-title>
                             <a href="<?php echo $article->uri; ?>"><?php echo $article->title; ?></a>
@@ -103,13 +115,12 @@
                         </div>
                         <div class=endTime>
                             <div class=endTime-box>
-                                <!-- TODO: 提出時刻/終了時刻 -->
                             </div>
                         </div>
                         <span class="good btn"> <?php?>いいね</span> //ここでいいね数をデータベースに追加
                     </div>
                 </div>
-            <?php } //endforeach ?>
+            <?php } ?>
             </div>
         </div>
        	<form action="add.php" method="post">
