@@ -27,31 +27,31 @@ $article_id = $_GET['article_id'];
                     <a href="index.php">トップページ</a>
                 </div>
                 <div class=header-list>
-                    <a>じゃんる</a>
+                    <a>政治</a>
                 </div>
                 <div class=header-list>
-                    <a>ニュース</a>
+                    <a>小説</a>
                 </div>
                 <div class=header-list>
-                    <a>おもしろ画像</a>
+                    <a>エンタメ</a>
                 </div>
                 <div class=header-list>
-                    <a>動画</a>
+                    <a>アニメ・漫画</a>
                 </div>
                 <div class=header-list>
-                    <a>アニメ</a>
+                    <a>ゲーム</a>
                 </div>
                 <div class=header-list>
-                    <a>萌え</a>
+                    <a>IT</a>
                 </div>
                 <div class=header-list>
-                    <a>政治・経済</a>
+                    <a>スポーツ</a>
                 </div>
                 <div class=header-list>
                     <a href="http://kemono-friends.jp">ふれんず</a>
                 </div>
                 <div class=header-list>
-                    <a>アダルト</a>
+                    <a>その他</a>
                 </div>
             </div>
         </header>
