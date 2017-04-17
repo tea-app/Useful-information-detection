@@ -57,8 +57,9 @@
 }
 
 .content-box {
-    margin: 20px;
+    margin: 50px 50px 80px 40px;
+    padding: 15px 0px 15px 10px;
     height: 100px;
     width: 80%;
-/*    border: 2.0px solid #B2B9B5;*/
+    border: 2.0px solid #B2B9B5;
 }
