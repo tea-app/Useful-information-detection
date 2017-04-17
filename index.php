@@ -62,6 +62,7 @@ $all = $db->Acquisition();
         <div class=sidebar>
             <div class=sidebar-left>
                 <div class=sidebar-box>
+                    <p>　　　</p>
                 </div>
             </div>
             <div class=sidebar-right>
