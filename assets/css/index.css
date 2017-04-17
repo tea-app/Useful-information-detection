@@ -7,13 +7,14 @@ body {
 }
 
 
-/*以下 ヘッダー*/
+
+/****ヘッダー****/
 header {
     top: 0px;
     height: 40px;
     width: 100%;
-    background-color: rgb(94, 80, 154);
     position: fixed; /*画面上に固定*/
+    background-color: rgb(94, 80, 154);
     z-index: 999;　/*要素の重なりの順番を指定*/
 }
 
@@ -41,27 +42,32 @@ header {
 }
 
 
-/*以下 タイトル*/
+
+/****タイトル****/
+/*Scientific Glasses 速報*/
 .header-title {
     top: 75px;
     left: 4.5%;
-    position: absolute;
+    position: absolute;    
     height: 240px;
     width: 91%;
     border: 2.5px solid #6f7376;
     background-color: rgba(255, 255, 255, 0);
     z-index: 10;
 }
-
+/*タイトル名の編集*/
 .header-title p { 
-    color: #474b4e;
+    color: #474b4e; /*文字色*/
     padding-top: 85px;
     text-align: center; /*中央揃え*/
     font-size: 50px;
     font-family: serif;
 }
 
-/*以下 サイドバー*/
+
+
+/****サイドバー****/
+/**左サイドバー**/
 .sidebar-left {
     top: 350px;
     position: absolute;
@@ -69,7 +75,7 @@ header {
     width: 5%;
     border-right: 2.0px solid #B2B9B5;
 }
-
+/**右サイドバー**/
 .sidebar-right {
     top: 350px;
     right: 5%;
@@ -77,6 +83,7 @@ header {
     height: 3723px;
     border-left: 2.0px solid #B2B9B5;
 }
+
 
 
 /*以下 タイトル一覧*/
@@ -179,7 +186,7 @@ header {
 }
 
 
-/*以下　製作者の自己紹介*/
+/****管理者の自己紹介****/
 .producerProfile-bar {
     top: 1454px;
     right: 5%;
@@ -208,14 +215,14 @@ header {
 }
 
 
-/*以下 記事*/
+/****記事****/
 .articles {
     top: 350px;
     position: absolute;
-    height: 3723px;
+    height: auto;
     width: 100%;
-    border-top: 2.4px solid #959b98;
-    border-bottom: 2.4px solid #959b98;
+    border-top: 0.4px solid #959b98;
+    border-bottom: 0.4px solid #959b98;
     background-color: rgba(255, 255, 255, 0);
 }
 
@@ -223,7 +230,7 @@ header {
     top: 420px;
     left: 120px;
     position: absolute;
-    height: 2530px;
+    height: auto;
     width: 65%;
     border: 2.0px solid #B2B9B5;
     background-color: rgba(255, 255, 255, 0);
@@ -274,7 +281,8 @@ header {
 }
 
 
-/*以下 投稿欄*/
+
+/****投稿欄****/
 .post {
     top: 3300px;
     position: absolute;
@@ -332,7 +340,8 @@ header {
 }
 
 
-/*以下トップへ戻るボタン*/
+
+/****トップへ戻るボタン****/
 #pageTop {
   position: fixed;
   bottom: 25px;
@@ -364,12 +373,11 @@ header {
   opacity: 0.7;
 }
 
-/*以下 フッター*/
+/****フッター****/
 footer {
-    top: 4073px;
-    position: absolute;
-    height: 80px;
+    bottom: 0px;
+    position: fixed;
+    height: 50px;
     width: 100%;
-    background-color: #ffe7e7;
-    opacity: 0.8;
+    background-color: rgb(94, 80, 154);
 }
