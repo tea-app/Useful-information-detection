@@ -20,6 +20,7 @@ $article_id = $_GET['article_id'];
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     </head>
     <body>
+        <!--ここからヘッダー-->
         <header>
             <div class=container>
                 <div class=header-list>
@@ -54,6 +55,7 @@ $article_id = $_GET['article_id'];
                 </div>
             </div>
         </header>
+        <!--ここからページタイトル-->
         <div class=header-title>
             <p>Scientific Glasses 速報</p>
         </div>
@@ -67,6 +69,7 @@ $article_id = $_GET['article_id'];
                 </div>
             </div>
         </diV>
+        <!--ここから偽広告-->
         <div class=design>
             <div class=side-tagFirst>
                 <p>＜PR＞</p>
@@ -81,6 +84,7 @@ $article_id = $_GET['article_id'];
                 </div>
             </div>
         </div>
+        <!--ここから管理者プロフィール-->
         <div class=producerProfile>
             <div class=producerProfile-bar>
                 <p>管理人</p>
@@ -90,6 +94,7 @@ $article_id = $_GET['article_id'];
         </div>
         <?php foreach($all as $one) { 
         if ($one[0] == $_GET['article_id']) { ?>
+        <!--ここから記事欄-->
         <div class=articles>
             <div class=containerArea>
                  <div class=title-box>
@@ -108,7 +113,7 @@ $article_id = $_GET['article_id'];
             </div>
         </div>
         <?php } }?>
-<!--        ここからコメント-->
+        <!--ここからコメント-->
         <?php foreach($allc as $one) { 
             if ($one[1] == $_GET['article_id']) { ?>
             <div class=comments>
@@ -121,6 +126,7 @@ $article_id = $_GET['article_id'];
                 </div>
             </div>
         <?php } }?>
+        <!--ここからコメント投稿-->
         <form action="addComment.php?article_id=<?php echo $article_id ?>" method="post">
             <div class=post>
                 <div class=post-logo>
@@ -135,6 +141,7 @@ $article_id = $_GET['article_id'];
                 </div>
             </div>
         </form>
+        <!--ここからフッター-->
         <footer>
         </footer>
         <p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>
